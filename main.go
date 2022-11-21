@@ -25,11 +25,11 @@ type student struct {
 
 var infos []Info
 
-// func getinfos(w http.ResponseWriter, r *http.Request) {
-// 	w.Header().Set("Content-Type", "application/json")
-// 	json.NewEncoder(w).Encode(infos)
+func getinfos(w http.ResponseWriter, r *http.Request) {
+	w.Header().Set("Content-Type", "application/json")
+	json.NewEncoder(w).Encode(infos)
 
-// }
+}
 
 // this function will delete the info
 
@@ -46,7 +46,7 @@ func deleteInfo(w http.ResponseWriter, r *http.Request) {
 
 }
 
-//thid function will
+//this function will get info
 
 func getInfo(w http.ResponseWriter, r *http.Request) {
 	w.Header().Set("Content-Type", "application/json")
@@ -59,6 +59,8 @@ func getInfo(w http.ResponseWriter, r *http.Request) {
 	}
 }
 
+// this function will create  info
+
 func createInfo(w http.ResponseWriter, r *http.Request) {
 	w.Header().Set("Content-Type", "application/json")
 	var Info Info
@@ -68,6 +70,8 @@ func createInfo(w http.ResponseWriter, r *http.Request) {
 	json.NewEncoder(w).Encode(Info)
 
 }
+
+// this function will update info
 
 func updateInfo(w http.ResponseWriter, r *http.Request) {
 	w.Header().Set("Content-Type", "application/json")
